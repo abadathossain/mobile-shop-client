@@ -2,7 +2,8 @@
 
 import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
 import { createContext, useEffect, useState } from "react"
-import auth from '../firebase/firebase.config';
+import auth from './../firebase/firebase.config';
+import axios from "axios";
 
 export const AuthContext = createContext(null)
 
@@ -32,6 +33,19 @@ export default function AuthProvider({ children }) {
             // console.log('auth state change')
             setUser(currentUser)
             // console.log(currentUser)
+            if (currentUser) {
+                axios.post('http://localhost:4000/jwt', { email: currentUser.email }).then((data) => {
+                    if (data.data) {
+                        localStorage.setItem("access-token", data?.data?.token)
+                        setLoading(false)
+                    }
+                })
+
+            }
+            else {
+                localStorage.removeItem("access-token")
+                setLoading(false)
+            }
 
         })
         return () => {
