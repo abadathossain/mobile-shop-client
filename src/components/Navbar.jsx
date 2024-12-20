@@ -12,7 +12,7 @@ const Navbar = () => {
         <li><NavLink to="/about">About</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
         <li><NavLink to="/addict">Product</NavLink></li>
-        {/* <li><NavLink to="/login">Login</NavLink></li> */}
+        <li><NavLink to="/login">Login</NavLink></li>
     </>
 
     return (
@@ -31,7 +31,7 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex ">
                 <ul className="menu menu-horizontal px-1">
-                    {/* {navLinks} */}
+                    {navLinks}
                     <UserDropdown />
                 </ul>
             </div>
