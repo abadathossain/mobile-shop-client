@@ -20,7 +20,7 @@ const FilterBsr = () => {
                 </select>
             </div>
             <div>
-                <select className="select w-full max-w-xs mt-5">
+                <select className="select w-full max-w-xs mt-5 mb-5">
                     <option disabled selected>Category</option>
                     <option>Homer</option>
                     <option>Marge</option>
@@ -29,6 +29,7 @@ const FilterBsr = () => {
                     <option>Maggie</option>
                 </select>
             </div>
+            <button className="btn btn-primary w-full">Reset</button>
         </div>
     )
 }
