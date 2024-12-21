@@ -11,6 +11,7 @@ import PrivateRoutes from './private/PrivateRoutes';
 import SellerRoute from './private/SellerRoute';
 import MyProducts from './../pages/seller/MyProducts';
 import AddProducts from './../pages/seller/AddProducts';
+import Products from "../pages/Products";
 
 export const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
                 element: <Home />,
             },
             {
+                path: "/products",
+                element: <Products />,
+            },
+            {
                 path: "/about",
                 element: <About />,
             },
@@ -29,6 +34,7 @@ export const router = createBrowserRouter([
                 path: "/contact",
                 element: <Contact />,
             },
+
 
             {
                 path: "/login",
