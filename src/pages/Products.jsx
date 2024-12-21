@@ -36,24 +36,19 @@ const Products = () => {
                     </div>
                     {/* content */}
                     <div className='col-span-10 min-h-screen '>
-                        <h1>product</h1>
-                        {/* {
-                            loading?(<Loading/>):<>
+                        <h1 className="text-4xl mb-3 mt-3 font-bold text-blue-700 text-center">All Products</h1>
+                        <div >
                             {
-                                products.length===0?(<h1>No found</h1>):(
-                                    {
-                                    products.map((product)=>{<Productcard/>}
-                                        
-                                    )
-                                })
+                                loading ? (<Loading />) : (
+                                    <>{products.length === 0 ? <div>
+                                        <h1>No found</h1>
+                                    </div> :
+                                        <div className='grid grid-cols-3 gap-2'>
+                                            {products.map((product) => (<Productcard key={product._id} product={product} />))}
+                                        </div>}</>
+                                )
                             }
-                            </>
-                        } */}
-                        {
-                            loading ? (<Loading />) : (
-                                <>{products.length === 0 ? <div><h1>No found</h1></div> : <div>{products.map((product) => (<Productcard key={product._id} />))}</div>}</>
-                            )
-                        }
+                        </div>
                     </div>
 
                 </div>
