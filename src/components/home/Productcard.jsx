@@ -1,6 +1,6 @@
 
 const Productcard = ({ product }) => {
-    console.log(product)
+    // console.log(product)
     const { imageURL, brand, price, title, stock, sellerEmail, description } = product
     return (
         <div className="card card-compact bg-base-100 w-96 shadow-xl">
