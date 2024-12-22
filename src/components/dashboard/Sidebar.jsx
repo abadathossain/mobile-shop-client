@@ -5,6 +5,16 @@ import { NavLink } from 'react-router-dom';
 import useUserData from "../../hooks/useUserData";
 import { AiOutlineProduct } from "react-icons/ai";
 import useAuth from "../../hooks/useAuth";
+import { RiAdminLine } from "react-icons/ri";
+// Routes for admin
+const AdminRoutes = [
+    {
+        id: 1,
+        route: "/dashboard/admin",
+        title: "Manage Sellers",
+        icon: <RiAdminLine />,
+    },
+];
 const SellerRoutes = [
     {
         id: 1,
@@ -34,6 +44,17 @@ const Sidebar = () => {
                         <p>Overview</p>
                     </NavLink>
                 </li>
+                {/* Admin-specific routes */}
+                {userData?.role === "admin" &&
+                    AdminRoutes.map((route) => (
+                        <li key={route.id} className="p-2 border border-black rounded-md">
+                            <NavLink className="flex items-center gap-2" to={route.route}>
+                                <>{route.icon}</>
+                                <>{route.title}</>
+                            </NavLink>
+                        </li>
+                    ))
+                }
                 {
                     userData?.role === "seller" &&
                     SellerRoutes.map((route) => (

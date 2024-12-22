@@ -65,7 +65,7 @@ const Register = () => {
                                 <span className="label-text">Password</span>
                             </label>
                             <input type="password" placeholder="password" className="input input-bordered"
-                                {...register("password", { required: true, minLength: 6 }
+                                {...register("password", { required: true, minLength: 8 }
 
                                 )}
                             />
@@ -101,6 +101,8 @@ const Register = () => {
 
                             <option value='buyer'>Buyer</option>
                             <option value='seller'>Seller</option>
+                            {/* <option value='admin'>Adimin</option> */}
+                            <option disabled hidden value='admin'>Admin</option>
 
                         </select>
                         <div className="form-control mt-6">

@@ -12,7 +12,7 @@ const Productcard = ({ product }) => {
             <div className="card-body">
                 <h1 className="card-title text-2xl">{title}</h1>
                 <h3 className="card-title">{brand}</h3>
-                <h3 className="card-title">${price}</h3>
+                <h3 className="card-title">$={price}</h3>
                 <h3 className="card-title">No.of quantity:{stock}</h3>
 
                 <p>{description}</p>

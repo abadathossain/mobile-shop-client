@@ -12,6 +12,7 @@ import SellerRoute from './private/SellerRoute';
 import MyProducts from './../pages/seller/MyProducts';
 import AddProducts from './../pages/seller/AddProducts';
 import Products from "../pages/Products";
+import ManageSeller from "../pages/admin/ManageSeller";
 
 export const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
             {
                 path: "/dashboard/overview",
                 element: <Overview />,
+            },
+            {
+                path: "/dashboard/admin",
+                element: <ManageSeller />,
             },
             {
                 path: "/dashboard/my-products",
