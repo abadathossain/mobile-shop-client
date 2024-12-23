@@ -7,7 +7,7 @@ const ManageUsers = () => {
 
     // Fetch sellers from the server
     useEffect(() => {
-        fetch("http://localhost:4000/users")
+        fetch("https://mobile-shop-server-delta.vercel.app/users")
             .then((response) => response.json())
             .then((data) => setSellers(data))
             .catch(() => setError("Failed to load sellers. Please try again."))
@@ -24,7 +24,7 @@ const ManageUsers = () => {
         }
 
         // Update status in backend (no error handling needed here in the API side)
-        fetch(`http://localhost:4000/users/${id}/${newStatus}`, {
+        fetch(`https://mobile-shop-server-delta.vercel.app/users/${id}/${newStatus}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
         });

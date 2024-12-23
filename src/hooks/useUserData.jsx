@@ -7,7 +7,7 @@ const useUserData = () => {
     const [userData, setUserData] = useState()
     useEffect(() => {
         const fetchData = async () => {
-            const res = await axios.get(`http://localhost:4000/user/${user.email}`)
+            const res = await axios.get(`https://mobile-shop-server-delta.vercel.app/user/${user.email}`)
             setUserData(res.data)
         }
         if (user?.email && !loading) {
