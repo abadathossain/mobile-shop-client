@@ -20,7 +20,7 @@ const Register = () => {
         // console.log(userData)
 
         createUser(data.email, data.password).then(() => {
-            axios.post('https://mobile-shop-server-delta.vercel.app/users', userData).then((res) => {
+            axios.post('https://mobile-shop-server-orpin-one.vercel.app/user/users', userData).then((res) => {
                 console.log(res.data)
                 if (res.data.insertedId) {
                     Swal.fire({

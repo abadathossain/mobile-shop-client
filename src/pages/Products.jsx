@@ -19,7 +19,7 @@ const Products = () => {
     useEffect(() => {
         setLoading(true)
         const fetch = async () => {
-            axios.get(`https://mobile-shop-server-delta.vercel.app/all-products`).then((res) => {
+            axios.get(`https://mobile-shop-server-orpin-one.vercel.app/user/all-products`).then((res) => {
                 // console.log(res.data)
                 setProducts(res.data)
                 setLoading(false)
