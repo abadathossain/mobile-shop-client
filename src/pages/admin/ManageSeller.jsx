@@ -7,7 +7,7 @@ const ManageUsers = () => {
 
     // Fetch sellers from the server
     useEffect(() => {
-        fetch("https://mobile-shop-server-orpin-one.vercel.app/users")
+        fetch("https://mobile-shop-server-orpin-one.vercel.app//users")
             .then((response) => response.json())
             .then((data) => setSellers(data))
             .catch(() => setError("Failed to load sellers. Please try again."))
@@ -24,7 +24,7 @@ const ManageUsers = () => {
         }
 
         // Update status in backend (no error handling needed here in the API side)
-        fetch(`https://mobile-shop-server-orpin-one.vercel.app/users/${id}/${newStatus}`, {
+        fetch(`https://mobile-shop-server-orpin-one.vercel.app//users/${id}/${newStatus}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
         });

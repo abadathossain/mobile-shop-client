@@ -34,7 +34,7 @@ export default function AuthProvider({ children }) {
             setUser(currentUser)
             // console.log(currentUser)
             if (currentUser) {
-                axios.post('https://mobile-shop-server-orpin-one.vercel.app/jwt', { email: currentUser.email }).then((data) => {
+                axios.post('https://mobile-shop-server-orpin-one.vercel.app//jwt', { email: currentUser.email }).then((data) => {
                     if (data.data) {
                         localStorage.setItem("access-token", data?.data?.token)
                         setLoading(false)

@@ -18,7 +18,7 @@ const AddProducts = () => {
 
         const product = { title, brand, imageURL, price, stock, description, sellerEmail };
         const token = localStorage.getItem("access-token");
-        axios.post("https://mobile-shop-server-orpin-one.vercel.app/add-products", product, {
+        axios.post("https://mobile-shop-server-orpin-one.vercel.app//add-products", product, {
             headers: {
                 authorization: `Bearer ${token}`
             }
